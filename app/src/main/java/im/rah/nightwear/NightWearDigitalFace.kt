@@ -188,7 +188,7 @@ class NightWearDigitalFace : CanvasWatchFaceService() {
                 return
             }
 
-            val bgText = BloodGlucosePresenter(bloodGlucoseService.latestBg as BloodGlucose).combinedString(mMmol)
+            val bgText = BloodGlucosePresenter(bloodGlucoseService.latestBg as BloodGlucose, mmol = mMmol).combinedString()
             canvas.drawText(bgText, mXOffset, mYOffset, mTextPaint)
 
             if (!mAmbient) {
